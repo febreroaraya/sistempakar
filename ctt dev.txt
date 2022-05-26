@@ -1,5 +1,0 @@
-FW: PHP Native
-
-PHP7:
-- Penambahan convert php 7 di folder config & folder utama
-- Gunakan di php versi 7 kebawah jika ada masalah
