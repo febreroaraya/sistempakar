@@ -48,8 +48,8 @@
                                             <td><?= $r->nm_gejala ?></td>
                                             <td><?= $r->nilai_probabilitas ?></td>
                                             <td>
-                                                <a href="#editpenyakit<?= $r->kd_gejala ?>" data-toggle="modal" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                                                <a href="<?= base_url('admin/delete_gejala/' . $r->kd_gejala) ?>" onclick="return confirm('apakah anda yakin menghapus data?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</a>
+                                                <a href="#editpenyakit<?= $r->id_aturan ?>" data-toggle="modal" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
+                                                <a href="<?= base_url('admin/delete_rule/' . $r->id_aturan) ?>" onclick="return confirm('apakah anda yakin menghapus data?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -110,10 +110,10 @@
         </form>
     </div>
 </div>
-<?php foreach ($rule2 as $gjl) { ?>
-    <div class="modal fade" id="editpenyakit<?= $gjl->kd_gejala ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<?php foreach ($rule2 as $rl) { ?>
+    <div class="modal fade" id="editpenyakit<?= $rl->id_aturan ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
-            <form method="post" action="<?= base_url('admin/update_gejala') ?>">
+            <form method="post" action="<?= base_url('admin/update_rule') ?>">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Form Edit Gejala</h5>
@@ -123,15 +123,36 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group row">
-                            <label class="control-label col-md-3 col-sm-3 ">Kode Gejala</label>
+                            <label class="control-label col-md-3 col-sm-3 ">Penyakit</label>
                             <div class="col-md-9 col-sm-9 ">
-                                <input type="text" class="form-control" name="kd_gejala" readonly value="<?= $gjl->kd_gejala ?>" placeholder="Kode Gejala..." required>
+                                <select name="kd_penyakit" class="form-control">
+                                    <option>--Pilih--</option>
+                                    <?php foreach ($penyakit as $p) { ?>
+                                        <option <?php if ($rl->kd_penyakit == $p->kd_penyakit)
+                                                    echo "selected=\"selected\"";
+                                                ?> value="<?= $p->kd_penyakit ?>"><?= $p->nm_penyakit ?></option>
+                                    <?php } ?>
+                                </select>
+                                <input type="hidden" name="id_aturan" value="<?= $rl->id_aturan ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="control-label col-md-3 col-sm-3 ">Nama Gejala</label>
+                            <label class="control-label col-md-3 col-sm-3 ">Gejala</label>
                             <div class="col-md-9 col-sm-9 ">
-                                <input type="text" class="form-control" name="nm_gejala" value="<?= $gjl->nm_gejala ?>" placeholder="Nama Gejala..." required>
+                                <select name="kd_gejala" class="form-control">
+                                    <option>--Pilih--</option>
+                                    <?php foreach ($gejala as $g) { ?>
+                                        <option <?php if ($rl->kd_gejala == $g->kd_gejala)
+                                                    echo "selected=\"selected\"";
+                                                ?> value="<?= $g->kd_gejala ?>"><?= $g->nm_gejala ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 ">Nilai Probabilitas</label>
+                            <div class="col-md-9 col-sm-9 ">
+                                <input type="text" class="form-control" name="nilai_probabilitas" value="<?= $rl->nilai_probabilitas ?>" placeholder="Nilai Probabilitas..." required>
                             </div>
                         </div>
                     </div>

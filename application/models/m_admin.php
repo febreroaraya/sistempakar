@@ -6,6 +6,7 @@ class m_admin extends CI_Model
     private $tb_penyakit = 'penyakit';
     private $tb_gejala = 'gejala';
     private $tb_aturan = 'aturan';
+    private $tb_pesan = 'bukutamu';
 
     public function get_penyakit()
     {
@@ -19,12 +20,39 @@ class m_admin extends CI_Model
 
     public function get_rule()
     {
-        $this->db->select('aturan.nilai_probabilitas, penyakit.*, gejala.*');
+        $this->db->select('aturan.nilai_probabilitas, aturan.id_aturan, penyakit.*, gejala.*');
         $this->db->from('aturan');
         $this->db->join('penyakit', 'aturan.kd_penyakit = penyakit.kd_penyakit');
         $this->db->join('gejala', 'aturan.kd_gejala = gejala.kd_gejala');
         $this->db->order_by('id_aturan', 'desc');
         return $this->db->get()->result();
+    }
+
+    public function get_pesan()
+    {
+        return $this->db->get($this->tb_pesan)->result();
+    }
+
+    public function get_diagnosa()
+    {
+        $this->db->select('*');
+        $this->db->from('diagnosa');
+        $this->db->join('penyakit', 'diagnosa.kd_penyakit = penyakit.kd_penyakit');
+        $this->db->join('gejala', 'diagnosa.kd_gejala = gejala.kd_gejala');
+        $this->db->order_by('kd_diagnosa', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function get_laporan($tgl_awal, $tgl_akhir)
+    {
+        $this->db->select('*');
+        $this->db->from('diagnosa');
+        $this->db->join('penyakit', 'diagnosa.kd_penyakit = penyakit.kd_penyakit');
+        $this->db->join('gejala', 'diagnosa.kd_gejala = gejala.kd_gejala');
+        $this->db->where('tgl_diagnosa >=', $tgl_awal);
+        $this->db->where('tgl_diagnosa <=', $tgl_akhir);
+        return $this->db->get()->result();
+
     }
 
     public function save_penyakit()

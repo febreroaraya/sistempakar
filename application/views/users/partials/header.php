@@ -80,42 +80,21 @@ Fixed Navigation
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
                         <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Homepage
+                            <a class="nav-link" href="#" >
+                                Beranda
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.html">Homepage</a>
-                                <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
-                                <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
-                            </div>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="about.html">Informasi</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="service.html">Services</a>
+                            <a class="nav-link" href="service.html">Konsultasi</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <a class="nav-link" href="portfolio.html">Kontak</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="team.html">Team</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pages
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="404.html">404 Page</a>
-                                <a class="dropdown-item" href="blog.html">Blog Page</a>
-                                <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
-                            </div>
+                            <a class="nav-link" href="team.html">Masuk</a>
                         </li>
                     </ul>
                 </div>

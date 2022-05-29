@@ -79,7 +79,7 @@
                                 <li><a href="<?= base_url('admin/hasil_diagnosa') ?>"><i class="fa fa-stethoscope"></i></i> Hasil Diagnosa</a></li>
                                 <li><a href="<?= base_url('admin/laporan_diagnosa') ?>"><i class="fa fa-book"></i></i> Laporan Diagnosa</a></li>
                                 <li><a href="<?= base_url('admin/pesan_kontak') ?>"><i class="fa fa-envelope"></i></i> Pesan Kontak</a></li>
-                                <li><a href="<?= base_url('admin/pengaturan') ?>"><i class="fa fa-gear"></i></i> Pengaturan</a></li>
+                                <!-- <li><a href="<?= base_url('admin/pengaturan') ?>"><i class="fa fa-gear"></i></i> Pengaturan</a></li> -->
                             </ul>
                         </div>
 

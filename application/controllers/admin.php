@@ -144,4 +144,55 @@ class admin extends CI_Controller
         $this->session->set_flashdata('berhasil', true);
         redirect('admin/rule');
     }
+
+    public function update_rule()
+    {
+        $this->m_admin->update_rule();
+        $this->session->set_flashdata('berhasil_update', true);
+        redirect('admin/rule');
+    }
+
+    public function delete_rule($id)
+    {
+        $this->db->delete('aturan', ['id_aturan' => $id]);
+        $this->session->set_flashdata('berhasil_hapus', true);
+        redirect('admin/rule');
+    }
+
+    public function pesan_kontak()
+    {
+        $var['title'] = 'Admin | Pesan Kontak';
+        $var['pesan'] = $this->m_admin->get_pesan();
+        $var['pesan2'] = $this->m_admin->get_pesan();
+        $this->load->view('admin/pesan', $var);
+    }
+
+    public function delete_pesan($id)
+    {
+        $this->db->delete('bukutamu', ['id_bukkutamu' => $id]);
+        $this->session->set_flashdata('berhasil_hapus', true);
+        redirect('admin/pesan');
+    }
+
+    public function hasil_diagnosa()
+    {
+        $var['title'] = 'Admin | Hasil Diagnosa';
+        $var['diagnosa'] = $this->m_admin->get_diagnosa();
+        $var['diagnosa2'] = $this->m_admin->get_diagnosa();
+        $this->load->view('admin/diagnosa', $var);
+    }
+
+    public function laporan_diagnosa()
+    {
+        $var['title'] = 'Admin | Laporan Dignosa';
+        $this->load->view('admin/laporan', $var);
+    }
+
+    public function pdf_laporan()
+    {
+        $tgl_awal = $this->input->post('tgl_awal');
+        $tgl_akhir = $this->input->post('tgl_akhir');
+        $var['laporan'] = $this->m_admin->get_laporan($tgl_awal, $tgl_akhir);
+        $this->load->view('admin/pdf_laporan', $var);
+    }
 }

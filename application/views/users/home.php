@@ -1,14 +1,14 @@
 <?php $this->load->view('users/partials/header.php') ?>
 <div class="hero-slider">
-    <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(<?= base_url('assets/user/images/slider/medical-team-technology.jpg'); ?>);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
-                        Experience</h1>
-                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
-                        officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
-                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Explore Us</a>
+                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Sistem Pakar Deteksi Dini <br>
+                        Penyakit Diabetes Militus</h1>
+                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Silahkan berkonsultasi mengenai penyakit diabetes melitus<br> 
+                    melalui website yang kami kembangkan</p>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Mulai Konsultasi</a>
                 </div>
             </div>
         </div>
