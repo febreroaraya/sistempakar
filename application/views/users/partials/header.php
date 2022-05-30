@@ -35,6 +35,14 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/user/plugins/slick/slick.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="<?= base_url() ?>assets/js/sweetalert2-all.js"></script>
 
 </head>
 
@@ -79,22 +87,22 @@ Fixed Navigation
 
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link" href="#" >
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('user') ?>?">
                                 Beranda
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="about.html">Informasi</a>
+                            <a class="nav-link" href="<?= base_url('user/informasi') ?>">Informasi</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="service.html">Konsultasi</a>
+                            <a class="nav-link" href="<?= base_url('user/konsultasi') ?>">Konsultasi</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="portfolio.html">Kontak</a>
+                            <a class="nav-link" href="<?= base_url('user/kontak') ?>">Kontak</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="team.html">Masuk</a>
+                            <a class="nav-link" href="<?= base_url('admin/v_login') ?>">Masuk</a>
                         </li>
                     </ul>
                 </div>

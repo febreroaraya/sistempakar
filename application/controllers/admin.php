@@ -169,7 +169,7 @@ class admin extends CI_Controller
 
     public function delete_pesan($id)
     {
-        $this->db->delete('bukutamu', ['id_bukkutamu' => $id]);
+        $this->db->delete('bukutamu', ['id_bukutamu' => $id]);
         $this->session->set_flashdata('berhasil_hapus', true);
         redirect('admin/pesan');
     }
