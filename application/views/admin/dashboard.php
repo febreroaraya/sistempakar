@@ -77,7 +77,7 @@
                                         </h2>
                                         <p class="excerpt">
                                             Sistem pakar (Expert System) adalah sistem dibuat atau dirancang untuk mengadopsi pengetahuan atau knowledge manusia
-                                            ke dalam komputer atau sistem. hal tersebut lakukan untuk tujuan agar komputer dapat membatu meneyelesaikan suatu 
+                                            ke dalam komputer atau sistem. hal tersebut lakukan untuk tujuan agar komputer dapat membatu meneyelesaikan suatu
                                             permasalahan tertentu seperti yang dilakukan oleh para ahli / pakar.
                                         </p>
                                     </div>
@@ -91,7 +91,7 @@
                                         </h2>
                                         <p class="excerpt">
                                             Sistem pakar dapat dibangun dan dirancang dengan menggunakan beberapa metode yang telah ditemukan oleh para ahli.
-                                            salah satunya metode naive bayes yang digunakan pada sistem pakar ini. metode naive bayes digunakan pada sistem 
+                                            salah satunya metode naive bayes yang digunakan pada sistem pakar ini. metode naive bayes digunakan pada sistem
                                             pakar ini dikarenakan sistem klasifikasi yang digunakan pada naive bayes sangat baik dan memiliki probabilitas yang
                                             tinggi dalam perhitungan pada sistemnya
                                         </p>

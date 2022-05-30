@@ -67,7 +67,7 @@ class admin extends CI_Controller
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('email');
         $this->session->set_flashdata('logout', true);
-        redirect('admin/v_login');
+        redirect('user');
     }
 
     public function penyakit()
