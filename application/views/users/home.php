@@ -8,7 +8,7 @@
                         Penyakit Diabetes Militus</h1>
                     <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Silahkan berkonsultasi mengenai penyakit diabetes melitus<br>
                         melalui website yang kami kembangkan</p>
-                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Mulai Konsultasi</a>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="<?= base_url('user/konsultasi') ?>">Mulai Konsultasi</a>
                 </div>
             </div>
         </div>

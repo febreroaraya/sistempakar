@@ -14,7 +14,7 @@
 </section>
 <section class="portfolio section-sm" id="portfolio">
     <div class="container">
-        <form>
+        <form action="<?= base_url('user/proses_diagnosa') ?>" method="post">
             <div class="row">
                 <div class="col-lg-9">
                     <!-- section title -->
@@ -60,14 +60,19 @@
                         </thead>
                         <tbody>
                             <?php
-                            $no = 1;
-                            foreach ($gejala as $g) { ?>
+                            $no = 0;
+                            foreach ($gejala as $g) {
+                                $no++; ?>
                                 <tr>
                                     <td><?= $g->kd_gejala ?></td>
+                                    <td hidden><input name="id_gejala[]" value=<?= $g->kd_gejala ?> /></td>
                                     <td><?= $g->nm_gejala ?></td>
                                     <td>
-                                        <input type="radio" name="jawaban" value="ya"> YA
-                                        <input type="radio" name="jawaban" value="tidak"> TIDAK
+                                        <?php
+                                        $tmp = ['YA', 'TIDAK'];
+                                        foreach ($tmp as $t) { ?>
+                                            <input type="checkbox" name="jwb_gejala[]" value=<?= $t ?>> <?= $t ?>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -79,5 +84,22 @@
         </form>
     </div>
 </section>
+<script>
+    <?php if ($this->session->flashdata('tidak_terdeteksi')) : ?>
+        Swal.fire({
+            icon: 'info',
+            title: 'Anda tidak terdeteksi penyakit silahkan coba lagi!',
+            showConfirmButton: true,
+            // timer: 1500
+        })
+        <?php elseif ($this->session->flashdata('belum_pilih')) : ?>
+        Swal.fire({
+            icon: 'warning',
+            title: 'Anda belum memilih gejala!',
+            showConfirmButton: true,
+            // timer: 1500
+        })
+    <?php endif ?>
+</script>
 
 <?php $this->load->view('users/partials/footer.php') ?>

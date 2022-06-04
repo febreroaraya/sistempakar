@@ -88,7 +88,7 @@ Fixed Navigation
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('user') ?>?">
+                            <a class="nav-link" href="<?= base_url('user') ?>">
                                 Beranda
                             </a>
                         </li>
